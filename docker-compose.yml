@@ -1,0 +1,21 @@
+version: '2'
+
+# Define the services/containers to be run
+services:
+  angular: # name of the first service
+    build: mean-client # specify the directory of the Dockerfile
+    ports:
+      - "4200:4200" # specify port forewarding
+
+  express: #name of the second service
+    build: mean-server # specify the directory of the Dockerfile
+    ports:
+      - "3000:3000" #specify ports forewarding
+    links: # create connection from one service to another with the service as the host name
+      - database # link this service to the database service
+
+# need to specify mongo verison
+  database: # name of the third service
+    image: mongo # specify image to build container from
+    ports:
+      - "27017:27017" # specify port forewarding

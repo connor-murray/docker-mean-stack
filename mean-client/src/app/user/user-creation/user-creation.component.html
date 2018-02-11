@@ -1,0 +1,9 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-form-field style="margin:10px">
+    <input matInput placeholder="Name" [(ngModel)]="name">
+  </mat-form-field>
+  <mat-form-field style="margin:10px">
+    <input matInput placeholder="Age" [(ngModel)]="age" type="number">
+  </mat-form-field>
+  <button mat-raised-button color="primary" style="margin:10px" (click)="add()" [disabled]="!name || !age">Add</button>
+</div>

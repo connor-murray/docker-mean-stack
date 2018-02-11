@@ -1,0 +1,22 @@
+{
+  "name": "meanserver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "docker:all": "yarn run docker:remove && yarn run docker:build && yarn run docker:start",
+    "docker:remove": "docker stop nginx-server || true && docker rm nginx-server || true",
+    "docker:build": "docker build -t express-server .",
+    "docker:start": "docker run --name nginx-server -d -p 3000:3000 express-server"
+  },
+  "author": "connor murray",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "moment": "^2.19.1",
+    "mongoose": "^5.0.1"
+  }
+}
