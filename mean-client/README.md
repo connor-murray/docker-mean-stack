@@ -1,4 +1,4 @@
-# MeanClient
+# Mean Client
 
 Consists of two modules:
 - appModule
