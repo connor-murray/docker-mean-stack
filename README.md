@@ -1,6 +1,6 @@
 # Docker Mean Stack
 
-An Angular 5 application in the first Docker container that points to an ExpressJS API a second Docker container, which connects to MongoDB in third Docker container.
+An Angular application in the first Docker container that points to an ExpressJS API a second Docker container, which connects to MongoDB in third Docker container.
 
 ## Docker File
 Each project contains its own docker file which enables them to be run up individually.
